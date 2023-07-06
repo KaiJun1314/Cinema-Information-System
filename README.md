@@ -114,12 +114,11 @@ There are four(4) type of user in the system, you can login to the account using
 | Cashier | kaw@cinema.com | cashier! |
 
 ## User Interface
-Seat Display 
+Seat Display\
 ![Seat Display](assests/seat_display.png)
 
-
-Booking Receipt
-![Seat Display](assests/receipt.png)
+Booking Receipt\
+![Booking Receipt](assests/receipt.png)
 
 ## Installation:
 This sytem using some library and database connector, please download these packages before building the system
