@@ -117,6 +117,7 @@ There are four(4) type of user in the system, you can login to the account using
 Seat Display 
 ![Seat Display](assests/seat_display.png)
 
+
 Booking Receipt
 ![Seat Display](assests/receipt.png)
 
@@ -128,5 +129,5 @@ This sytem using some library and database connector, please download these pack
 
 1. `Workshop SQL.sql` contain the code to build database and `TestData.sql` contain testing data for the system. Create the database and load the sample data before starting the application
 2. Update the database credential in `DatabaseConnection.h`
-3. Include the downlaoded library in the project 
+3. Include the downloaded library in the project 
 4. Build the project
