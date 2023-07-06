@@ -92,15 +92,16 @@ erDiagram
         timestamp update_date_time
     }
 
-    hall }|--|| cinema
-    cinema ||--|{ account
-    hall ||--|{ hall_seat
-    hall ||--|| movie_showtime
-    hall_seat ||--o{ ticket
-    ticket }|--o| booking
-    movie_showtime ||-|| booking
-    account ||--o{ booking
-    movie_showtime }|-|| movie
+    
+    cinema ||--|{ account : have
+    hall }|--|| cinema : have
+    hall ||--|{ hall_seat : have
+    hall ||--|| movie_showtime : have
+    hall_seat ||--o{ ticket : contain
+    ticket }|--o| booking : contain
+    movie_showtime ||-|| booking : create
+    account ||--o{ booking : contain
+    movie_showtime }|-|| movie : have
 
 ```
 
