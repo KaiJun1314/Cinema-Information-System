@@ -91,17 +91,6 @@ erDiagram
         decimal default_price
         timestamp update_date_time
     }
-
-    hall }|--|| cinema
-    cinema ||--|{ account
-    hall ||--|{ hall_seat
-    hall ||--|| movie_showtime
-    hall_seat ||--o{ ticket
-    ticket }|--o| booking
-    movie_showtime ||-|| booking
-    account ||--o{ booking
-    movie_showtime }|-|| movie
-
 ```
 
 TODO LIST:
