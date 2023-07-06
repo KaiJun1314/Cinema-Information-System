@@ -92,45 +92,41 @@ erDiagram
         timestamp update_date_time
     }
 
-    
     cinema ||--|{ account : have
     hall }|--|| cinema : have
     hall ||--|{ hall_seat : have
     hall ||--|| movie_showtime : have
     hall_seat ||--o{ ticket : contain
     ticket }|--o| booking : contain
-    movie_showtime ||-|| booking : create
+    movie_showtime ||--|| booking : create
     account ||--o{ booking : contain
-    movie_showtime }|-|| movie : have
+    movie_showtime }|--|| movie : have
 
 ```
 
-TODO LIST:
+## User
+There are four(4) type of user in the system, you can login to the account using the following email and password.
+| User | Email | Password |
+| -------- | ------- | -------- |
+| Customer | kaijun@cinema.com | customer! |
+| Admin | jun@cinema.com | admin! | 
+| Manager | low@cinema.com | manager! |
+| Cashier | kaw@cinema.com | cashier! |
 
-Create:
+## User Interface
+Seat Display 
+![Seat Display](assests/seat_display.png)
 
-- [x] Category
-- [x] User
-- [x] Bill
-- [x] Individual Spending
+Booking Receipt
+![Seat Display](assests/receipt.png)
 
-Read:
+## Installation:
+This sytem using some library and database connector, please download these packages before building the system
+ - tabulate : https://github.com/p-ranav/tabulate.git
+ - json for c++ : https://github.com/nlohmann/json.git
+ - Mysql C++ connector : https://dev.mysql.com/downloads/connector/cpp/
 
-- [x] Category
-- [] User
-- [x] Bill
-- [x] Individual Spending
-
-Update:
-
-- [x] Category
-- [] User
-- [x] Bill
-- [x] Individual Spending
-
-Delete:
-
-- [x] Category
-- [] User
-- [x] Bill
-- [x] Individual Spending
+1. `Workshop SQL.sql` contain the code to build database and `TestData.sql` contain testing data for the system. Create the database and load the sample data before starting the application
+2. Update the database credential in `DatabaseConnection.h`
+3. Include the downlaoded library in the project 
+4. Build the project
